@@ -392,6 +392,9 @@ public final class MetadataTalendType {
         if (temp.equals(EDatabaseTypeName.MSSQL.getXMLType())) {
             return EDatabaseTypeName.MSSQL.getProduct();
         }
+        if (temp.startsWith("REDSHIFT")) { //$NON-NLS-1$
+            return "REDSHIFT"; //$NON-NLS-1$
+        }
         // Other db just return the product name
         return temp;
     }
